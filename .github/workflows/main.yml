@@ -13,4 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build .
+      run: docker build . -t py:latest
+      
+    - name: Run the Docker image
+      run: docker run py:latest
+      
